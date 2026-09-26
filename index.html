@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#070808">
+  <meta name="description" content="Базовый мини-курс по торговле золотом: 6 видеоуроков об устройстве рынка, Auction Market Theory, Price Action, Volume Profile и VWAP. Доступ через Telegram.">
+  <title>Базовый мини-курс по торговле золотом — Gold Trading Academy</title>
+  <style>
+    @font-face{font-family:"TT Firs Neue";src:url("assets/TTFirsNeue-Light.woff2") format("woff2");font-weight:300;font-display:swap}
+    @font-face{font-family:"TT Firs Neue";src:url("assets/TTFirsNeue-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+    @font-face{font-family:"TT Firs Neue";src:url("assets/TTFirsNeue-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+    @font-face{font-family:"TT Firs Neue";src:url("assets/TTFirsNeue-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+    :root{--bg:#070808;--ink:#f4f2ed;--muted:#aaa8a1;--gold:#d6b870;--gold2:#ead7a7;--line:rgba(234,215,167,.21);--ease:cubic-bezier(.16,1,.3,1)}
+    *{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"TT Firs Neue",Arial,sans-serif;line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}img,svg{display:block;max-width:100%}.wrap{width:min(calc(100% - 44px),1220px);margin-inline:auto}.site{position:relative;z-index:1;background:radial-gradient(ellipse 85% 780px at 90% 170px,rgba(172,129,55,.15),transparent 72%)}.grain{position:fixed;inset:0;z-index:30;pointer-events:none;background:url("assets/noise.gif") repeat;background-size:160px 120px;opacity:.075;mix-blend-mode:overlay}.lights{position:fixed;inset:-20%;z-index:0;pointer-events:none;overflow:hidden}.lights:before,.lights:after{content:"";position:absolute;border-radius:50%;filter:blur(92px)}.lights:before{width:55vw;height:55vw;right:-10%;top:3%;background:rgba(166,123,48,.12)}.lights:after{width:46vw;height:46vw;left:-15%;top:55%;background:rgba(87,71,42,.13)}
+    .nav{padding:max(22px,env(safe-area-inset-top)) 0 0}.nav-in{display:flex;justify-content:space-between;align-items:center;gap:18px}.brand{font-size:12px;font-weight:500;color:#d0cdc5}.nav-tag{font-size:12px;font-weight:700;letter-spacing:-.025em;display:flex;align-items:center;gap:9px;white-space:nowrap}.nav-tag:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(214,184,112,.1),0 0 16px rgba(214,184,112,.35)}
+    .hero{position:relative;overflow:hidden;padding:98px 0 96px}.hero:before{content:"";position:absolute;width:min(115vw,670px);aspect-ratio:1;right:-32%;top:3%;border:1px solid rgba(214,184,112,.15);border-radius:50%;box-shadow:0 0 85px rgba(214,184,112,.06),inset 0 0 75px rgba(214,184,112,.04);pointer-events:none}.hero:after{content:"";position:absolute;right:10%;bottom:5%;width:1px;height:160px;background:linear-gradient(transparent,rgba(214,184,112,.23),transparent);transform:rotate(32deg);pointer-events:none}.hero-in{position:relative}.eyebrow{color:var(--gold);font-size:10px;font-weight:700;letter-spacing:.17em;text-transform:uppercase}.hero h1{max-width:1020px;margin:19px 0 29px;font-size:clamp(47px,11.8vw,100px);font-weight:700;letter-spacing:-.063em;line-height:.95;text-wrap:balance}.hero h1 em,.section-title em{color:var(--gold2);font-style:normal}.hero-sub{max-width:760px;color:#e5e0d5;font-size:clamp(17px,4.5vw,23px);line-height:1.38;margin:0 0 22px}.hero-lead{max-width:720px;color:#bdb9b0;font-size:clamp(14px,3.7vw,17px);line-height:1.56;margin:0 0 30px}.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:27px}.hero-meta span{padding:8px 11px;border:1px solid rgba(214,184,112,.25);border-radius:999px;background:rgba(214,184,112,.07);color:#d7cdb8;font-size:11px}.hero-rule{height:1px;background:linear-gradient(90deg,transparent,rgba(214,184,112,.43),rgba(255,255,255,.11),transparent)}
+    .liquid-cta{position:relative;isolation:isolate;width:100%;max-width:365px;padding:2px;border-radius:999px;background:conic-gradient(from var(--angle),#6f5421,#f4e2b3,#98732e,#fff3ce,#6f5421);box-shadow:0 0 25px rgba(214,184,112,.22),0 22px 45px rgba(0,0,0,.45);animation:metalSpin 4.8s linear infinite}.liquid-cta:before{content:"";position:absolute;inset:-7px;border-radius:inherit;background:inherit;filter:blur(14px);opacity:.24;z-index:-1}.button{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:68px;padding:9px 10px 9px 21px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,.075) 42%,rgba(214,184,112,.14));color:#fff;font-size:14px;font-weight:700;white-space:nowrap;backdrop-filter:blur(25px) saturate(170%);-webkit-backdrop-filter:blur(25px) saturate(170%);box-shadow:inset 0 1px rgba(255,255,255,.4),inset 0 -2px 8px rgba(0,0,0,.45);transition:filter .3s var(--ease)}.button:before{content:"";position:absolute;top:-40%;bottom:-40%;left:-45%;width:32%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.7),transparent);transform:skewX(-18deg);pointer-events:none;animation:shine 3.3s ease-in-out infinite}.button:hover{filter:brightness(1.12)}.button-icon{display:grid;place-items:center;flex:0 0 auto;width:44px;height:44px;border-radius:50%;background:rgba(7,8,8,.82);color:var(--gold2);font-size:20px;box-shadow:inset 0 1px rgba(255,255,255,.18)}@property --angle{syntax:"<angle>";initial-value:0deg;inherits:false}@keyframes metalSpin{to{--angle:360deg}}@keyframes shine{0%,38%{left:-45%}70%,100%{left:125%}}
+    .section{padding:79px 0}.section-title{max-width:1020px;font-size:clamp(38px,9.6vw,78px);font-weight:700;line-height:1.01;letter-spacing:-.053em;margin:0 0 36px;text-wrap:balance}.section-intro{max-width:720px;color:#c4bfb5;font-size:clamp(15px,3.7vw,18px);line-height:1.56;margin:0 0 26px}.glass{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.18);border-radius:25px;background:linear-gradient(145deg,rgba(255,255,255,.105),rgba(255,255,255,.029) 55%,rgba(214,184,112,.035));box-shadow:0 28px 75px rgba(0,0,0,.29),inset 0 1px rgba(255,255,255,.16);backdrop-filter:blur(24px) saturate(140%);-webkit-backdrop-filter:blur(24px) saturate(140%)}.glass:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(112deg,rgba(255,255,255,.1),transparent 24%,transparent 73%,rgba(214,184,112,.055))}.glass:after{content:"";position:absolute;top:0;left:8%;width:60%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.62),transparent)}.reveal{opacity:0;transform:translateY(19px);transition:opacity .72s var(--ease),transform .72s var(--ease)}.reveal.show{opacity:1;transform:none}
+    .lessons{display:grid;grid-template-columns:1fr;gap:14px}.lesson{min-height:278px;padding:25px;display:flex;flex-direction:column;align-items:flex-start}.lesson-top{position:relative;display:flex;justify-content:space-between;align-items:flex-start;width:100%;gap:16px;margin-bottom:auto}.lesson-icon{width:68px;height:68px;display:grid;place-items:center;color:var(--gold2)}.lesson-icon svg{width:62px;height:62px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;overflow:visible;filter:drop-shadow(0 0 15px rgba(214,184,112,.1))}.lesson-number{color:rgba(234,215,167,.65);font-size:13px;font-weight:700;letter-spacing:.13em}.lesson h3{position:relative;font-size:clamp(22px,5.5vw,30px);line-height:1.1;letter-spacing:-.035em;margin:21px 0 12px}.lesson p{position:relative;color:#bdb9b1;font-size:13px;line-height:1.55;margin:0}.lesson:nth-child(6){border-color:rgba(214,184,112,.39);background:linear-gradient(145deg,rgba(214,184,112,.15),rgba(255,255,255,.04))}
+    @keyframes icon-breathe{0%,100%{transform:translateY(0);opacity:.8}50%{transform:translateY(-3px);opacity:1}}
+    .logic{position:relative;background:radial-gradient(ellipse at 85% 20%,rgba(214,184,112,.075),transparent 53%)}.logic .section-title{max-width:870px}.logic-copy{max-width:720px;color:#c4bfb5;font-size:clamp(15px,3.7vw,18px);line-height:1.58}.logic-copy p{margin:0 0 13px}.logic-copy strong{color:var(--gold2)}.process-flow{position:relative;list-style:none;display:grid;grid-template-columns:1fr;gap:0;max-width:880px;padding:5px 0 5px 23px;margin:32px 0}.process-flow:before{content:"";position:absolute;left:6px;top:20px;bottom:20px;width:1px;background:linear-gradient(var(--gold),rgba(214,184,112,.28),var(--gold))}.process-flow li{position:relative;padding:12px 16px;border-bottom:1px solid rgba(214,184,112,.2);font-size:clamp(17px,4.2vw,22px);font-weight:700;letter-spacing:-.028em}.process-flow li:before{content:"";position:absolute;left:-22px;top:23px;width:11px;height:11px;border:1px solid var(--gold2);border-radius:50%;background:var(--bg);box-shadow:0 0 14px rgba(214,184,112,.22)}.process-flow li:last-child{color:var(--gold2);border-bottom:0}.process-flow li:last-child:before{background:var(--gold2)}
+    .format-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.format-card{min-width:0;min-height:215px;padding:20px;display:flex;flex-direction:column}.format-card svg{position:relative;width:42px;height:42px;fill:none;stroke:var(--gold2);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;margin-bottom:auto;animation:icon-breathe 4s ease-in-out infinite}.format-card:nth-child(2) svg{animation-delay:-1s}.format-card:nth-child(3) svg{animation-delay:-2s}.format-card:nth-child(4) svg{animation-delay:-3s}.format-card h3{position:relative;font-size:clamp(17px,4.1vw,25px);line-height:1.08;letter-spacing:-.035em;margin:18px 0 8px}.format-card p{position:relative;color:var(--muted);font-size:12px;line-height:1.48;margin:0}.audience-grid{display:grid;gap:14px}.audience-card{padding:26px;min-height:210px}.audience-card .audience-label{position:relative;color:var(--gold2);font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}.audience-card h3{position:relative;font-size:clamp(23px,5.7vw,33px);line-height:1.08;letter-spacing:-.037em;margin:30px 0 11px}.audience-card p{position:relative;color:#bdb9b1;font-size:14px;line-height:1.55;margin:0}.audience-note{max-width:790px;margin:26px 0 0;padding:18px 0 0;border-top:1px solid var(--line);color:#bdb9b1;font-size:14px}
+    .offer-section{padding-top:91px;padding-bottom:110px}.offer-shell{padding:7px;border:1px solid rgba(255,255,255,.2);border-radius:32px;background:linear-gradient(145deg,rgba(255,255,255,.15),rgba(214,184,112,.07),rgba(255,255,255,.025));box-shadow:0 45px 120px rgba(0,0,0,.42),inset 0 1px rgba(255,255,255,.22);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px)}.offer{position:relative;overflow:hidden;padding:29px 21px 23px;border:1px solid rgba(255,255,255,.09);border-radius:26px;background:rgba(6,7,7,.69)}.offer:before{content:"";position:absolute;width:310px;height:310px;right:-150px;top:-150px;border-radius:50%;background:rgba(214,184,112,.14);filter:blur(60px)}.offer h2,.offer p,.offer ul,.offer .price-area,.offer .liquid-cta{position:relative}.offer h2{font-size:clamp(35px,8.8vw,64px);line-height:1.01;letter-spacing:-.051em;margin:0 0 15px}.offer h2 em{font-style:normal;color:var(--gold2)}.offer-lead{max-width:620px;color:#c8c4ba;font-size:15px;margin:0 0 28px}.offer-grid{position:relative;display:grid;gap:30px}.offer-includes{list-style:none;padding:0;margin:0}.offer-includes li{display:flex;gap:11px;align-items:flex-start;padding:9px 0;color:#e2ddd3;font-size:14px}.offer-includes li:before{content:"✓";color:var(--gold2);font-weight:700}.price-area{padding-top:23px;border-top:1px solid rgba(214,184,112,.26)}.price-label{display:block;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}.price-main{display:block;margin:8px 0 2px;color:var(--gold2);font-size:clamp(52px,12vw,83px);font-weight:700;line-height:1;letter-spacing:-.07em;white-space:nowrap}.price-usd{display:block;color:#bcb8af;font-size:14px;margin-bottom:17px}.one-payment{font-size:13px;color:#e0d5bd;margin:0 0 23px}.payment-label{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin:0 0 10px}.payment-methods{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px;padding:0;list-style:none}.payment-methods li{padding:8px 10px;border:1px solid rgba(214,184,112,.28);border-radius:999px;background:rgba(214,184,112,.07);color:#d4cec2;font-size:11px}.offer .liquid-cta{max-width:none}.offer-foot{max-width:660px;margin:16px 0 0;color:#bcb8af;font-size:11px;line-height:1.5}.offer-foot strong{color:var(--gold2);font-weight:500}.disclaimer{max-width:790px;margin:45px 0 0;padding-top:20px;border-top:1px solid var(--line);color:#919088;font-size:11px;line-height:1.5}.footer{padding:28px 0 calc(28px + env(safe-area-inset-bottom));border-top:1px solid rgba(255,255,255,.14);color:var(--muted);font-size:10px}.footer-in{display:flex;justify-content:space-between;gap:16px}.footer a{color:var(--gold2)}
+    @media(min-width:700px){.wrap{width:min(calc(100% - 56px),1220px)}.nav{padding-top:29px}.brand{font-size:14px}.nav-tag{font-size:15px}.hero{padding:133px 0 130px}.hero h1{font-size:clamp(70px,7.4vw,105px)}.hero-sub{font-size:22px}.hero-lead{font-size:17px}.section{padding:112px 0}.section-title{margin-bottom:51px}.lessons{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.lesson{min-height:315px;padding:30px}.lesson p{font-size:15px}.logic .logic-copy{font-size:18px}.format-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.format-card{min-height:275px;padding:24px}.format-card p{font-size:13px}.audience-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.audience-card{min-height:260px;padding:32px}.offer{padding:48px}.offer-grid{grid-template-columns:1fr .92fr;align-items:start;gap:65px}.price-area{padding-top:0;border:0}.offer-includes li{font-size:16px;padding:11px 0}.offer-foot{font-size:12px}}
+    @media(min-width:1050px){.lessons{grid-template-columns:repeat(3,minmax(0,1fr))}.lesson{min-height:340px}}
+    @media(max-width:380px){.wrap{width:min(calc(100% - 34px),1220px)}.hero h1{font-size:43px}.button{font-size:11px;padding-left:14px}.button-icon{width:36px;height:36px}.format-grid{gap:9px}.format-card{padding:16px;min-height:225px}.format-card h3{font-size:16px}.format-card p{font-size:11px}.price-main{font-size:47px}}
+    @media(max-width:699px){.grain{opacity:.06}}
+    /* Keep one continuous page surface; avoid a hard band between adjacent sections. */
+    .site{background:radial-gradient(ellipse 85% 780px at 90% 170px,rgba(172,129,55,.15),transparent 72%),var(--bg)}
+    .logic{background:transparent}
+    #lessons{padding-bottom:38px}
+    .logic{padding-top:38px}
+    .hero h1{margin-top:0}
+    .hero-sub{margin-bottom:31px}
+    .lesson-top{z-index:1}
+    .lesson-number{position:absolute;top:-26px;right:1px;color:rgba(234,215,167,.095);font-size:clamp(115px,28vw,180px);font-weight:700;line-height:1;letter-spacing:-.085em;pointer-events:none;user-select:none}
+    .lesson-icon{position:relative;z-index:1}
+    .lesson h3,.lesson p{z-index:1}
+    .kaspi-label{margin:20px 0 9px;color:#bdb9b1;font-size:12px;line-height:1.3}
+    .kaspi-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:0 0 27px}
+    .kaspi-option{min-width:0;min-height:43px;display:grid;place-items:center;padding:8px 9px;border:1px solid rgba(255,255,255,.23);border-radius:11px;background:#f44336;box-shadow:inset 0 1px rgba(255,255,255,.22),0 8px 18px rgba(205,48,35,.11);color:#fff;font-size:clamp(12px,3.25vw,15px);font-weight:700;letter-spacing:-.025em;line-height:1;white-space:nowrap}
+    .offer-section{padding-bottom:62px}
+    .mentorship-next{padding:0 0 99px}
+    .mentorship-next .wrap{position:relative;isolation:isolate;overflow:hidden;padding:37px 28px 30px;border:1px solid rgba(255,245,204,.72);border-radius:32px;background:radial-gradient(circle at 10% 2%,rgba(255,255,255,.72),transparent 32%),linear-gradient(126deg,#f4dea5 0%,#d9b66c 55%,#b5883a 100%);box-shadow:0 36px 90px rgba(0,0,0,.38),0 0 46px rgba(214,184,112,.2),inset 0 1px rgba(255,255,255,.7)}
+    .mentorship-next .wrap:before{content:"";position:absolute;z-index:-1;width:290px;height:290px;right:-135px;top:-155px;border:1px solid rgba(87,55,9,.19);border-radius:50%;box-shadow:0 0 0 44px rgba(255,255,255,.065),0 0 0 99px rgba(87,55,9,.035)}
+    .mentorship-next .mentor-kicker{display:block;margin:0 0 20px;color:#5c451b;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+    .mentorship-next h2{max-width:800px;margin:0 0 24px;color:#1c1911;font-size:clamp(39px,9.5vw,77px);line-height:1.02;letter-spacing:-.053em}
+    .mentorship-next h2 em{color:#6b4b17;font-style:normal}
+    .mentorship-next p{max-width:680px;margin:0 0 30px;color:#31291b;font-size:clamp(15px,3.7vw,18px);line-height:1.55}
+    .mentorship-next .mentor-button{max-width:365px;background:linear-gradient(135deg,rgba(20,20,17,.88),rgba(37,32,23,.73));border-color:rgba(255,255,255,.3);color:#fff;box-shadow:inset 0 1px rgba(255,255,255,.18),0 15px 35px rgba(45,33,12,.23);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+    .mentorship-next .mentor-button:before{display:none}
+    .mentorship-next .mentor-button .button-icon{border:1px solid rgba(234,215,167,.3);background:rgba(214,184,112,.13);color:var(--gold2)}
+    .mentorship-next .mentor-button:hover{border-color:#fff;filter:brightness(1.12)}
+    @media(max-width:380px){.kaspi-option{padding:7px 5px;font-size:11px}}
+    @media(min-width:700px){#lessons{padding-bottom:62px}.logic{padding-top:62px}.lesson-number{top:-30px;right:4px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.liquid-cta,.button:before,.format-card svg{animation:none!important}.reveal{opacity:1;transform:none;transition:none}}
+  </style>
+</head>
+<body>
+  <div class="lights" aria-hidden="true"></div>
+  <div class="site">
+    <div class="grain" aria-hidden="true"></div>
+    <header class="nav"><div class="wrap nav-in"><a class="brand" href="#top">@paxnurlana</a><span class="nav-tag">Gold Trading Academy</span></div></header>
+    <main>
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="wrap hero-in">
+          <h1 id="hero-title">Базовый мини-курс по торговле <em>золотом</em></h1>
+          <p class="hero-sub">6 видеоуроков, чтобы понять, как устроен рынок, научиться анализировать золото через Auction Market Theory, Price Action, Volume Profile и VWAP и собрать всё это в единую систему анализа.</p>
+          <div class="liquid-cta"><a class="button" href="#access">Получить доступ за 10 000 ₸ <span class="button-icon" aria-hidden="true">↓</span></a></div>
+        </div>
+      </section>
+      <div class="hero-rule" aria-hidden="true"></div>
+
+      <section class="section" id="lessons" aria-labelledby="lessons-title">
+        <div class="wrap">
+          <h2 class="section-title reveal" id="lessons-title">Что внутри <em>мини-курса</em></h2>
+          <div class="lessons">
+            <article class="lesson glass reveal"><div class="lesson-top"><div class="lesson-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M9 10v45h47" opacity=".48"/><path d="M14 44 23 35 31 39 40 25 47 29 56 14" stroke-width="2.7"/><circle cx="56" cy="14" r="2" fill="currentColor" stroke="none"/></svg></div><span class="lesson-number" aria-hidden="true">1</span></div><h3>Как на самом деле работает рынок</h3><p>Разбираем базовую механику рынка: Bid и Ask, ликвидность, типы ордеров, Market Makers и Market Takers, а также устройство рынка золота — Spot, Futures и CFD.</p></article>
+            <article class="lesson glass reveal"><div class="lesson-top"><div class="lesson-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M9 20h41m-8-7 8 7-8 7M55 44H14m8-7-8 7 8 7" stroke-width="2.6"/><path d="M25 29h14v6H25z" opacity=".7"/><circle cx="32" cy="32" r="2" fill="currentColor" stroke="none"/></svg></div><span class="lesson-number" aria-hidden="true">2</span></div><h3>Auction Market Theory</h3><p>Учимся смотреть на рынок как на непрерывный аукцион. Разбираем Price Discovery, Value, Balance и Imbalance, Acceptance и Rejection и понимаем, почему цена перемещается из одной области в другую.</p></article>
+            <article class="lesson glass reveal"><div class="lesson-top"><div class="lesson-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 55h52" opacity=".35"/><path d="M12 35v17m9-31v24m9-21v23m9-33v25m9-20v25m9-37v27" stroke-width="1.8"/><rect x="9" y="39" width="6" height="8"/><rect x="18" y="27" width="6" height="11" fill="currentColor" fill-opacity=".5"/><rect x="27" y="30" width="6" height="11"/><rect x="36" y="20" width="6" height="12" fill="currentColor" fill-opacity=".5"/><rect x="45" y="27" width="6" height="11"/><rect x="54" y="14" width="6" height="12" fill="currentColor" fill-opacity=".5"/></svg></div><span class="lesson-number" aria-hidden="true">3</span></div><h3>Price Action</h3><p>Учимся читать само движение цены: свечи, структуру рынка, Swing High и Swing Low, тренд и диапазон, Pullback, Breakout, Retest и общий контекст движения.</p></article>
+            <article class="lesson glass reveal"><div class="lesson-top"><div class="lesson-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M11 8v48h46" opacity=".45"/><path d="M12 13h10v5H12zm0 8h20v5H12zm0 8h34v5H12zm0 8h43v5H12zm0 8h25v5H12z"/><path d="M9 39.5h49" stroke-width="2.2"/><circle cx="55" cy="39.5" r="2" fill="currentColor" stroke="none"/></svg></div><span class="lesson-number" aria-hidden="true">4</span></div><h3>Volume Profile</h3><p>Разбираем объём по цене и учимся видеть, где проходила основная торговая активность. POC, Value Area, VAH, VAL, HVN и LVN — и как применять всё это при анализе золота.</p></article>
+            <article class="lesson glass reveal"><div class="lesson-top"><div class="lesson-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 53h49" opacity=".35"/><path d="M10 37c10-2 15-9 23-9s14-7 22-12M10 47c10-2 15-9 23-9s14-7 22-12" opacity=".5" stroke-width="1.8"/><path d="M10 42c10-2 15-9 23-9s14-7 22-12" stroke-width="2.8"/></svg></div><span class="lesson-number" aria-hidden="true">5</span></div><h3>VWAP</h3><p>Разбираем Volume Weighted Average Price: что показывает VWAP, как работать с ним на графике и как использовать его вместе с Price Action, AMT и Volume Profile.</p></article>
+            <article class="lesson glass reveal"><div class="lesson-top"><div class="lesson-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="9" width="15" height="11" rx="2"/><rect x="8" y="27" width="15" height="11" rx="2"/><rect x="8" y="45" width="15" height="11" rx="2"/><path d="M23 14.5h10M23 32.5h10M23 50.5h10M33 14.5v36M33 32.5h7" opacity=".68"/><rect x="40" y="21" width="16" height="23" rx="3" stroke-width="2"/><path d="m44 32 3 3 6-7" stroke-width="2.2"/></svg></div><span class="lesson-number" aria-hidden="true">6</span></div><h3>Собираем всё в одну систему</h3><p>Соединяем Market Mechanics, Auction Market Theory, Price Action, Volume Profile и VWAP в единый процесс анализа рынка и разбираем, как использовать все инструменты вместе.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section logic" id="logic" aria-labelledby="logic-title">
+        <div class="wrap">
+          <h2 class="section-title reveal" id="logic-title">Не набор отдельных инструментов, <em>а одна логика анализа</em></h2>
+          <div class="logic-copy reveal"><p>Главная задача мини-курса — не просто познакомить вас с несколькими терминами и индикаторами. К концу мини-курса у вас должна сложиться общая картина:</p></div>
+          <ol class="process-flow reveal" aria-label="Последовательность анализа"><li>Как работает рынок</li><li>Рыночный контекст</li><li>Auction Market Theory</li><li>Price Action</li><li>Volume Profile</li><li>VWAP</li><li>Торговая идея</li></ol>
+          <div class="logic-copy reveal"><p>Вы начнёте понимать, <strong>на что смотреть на графике, в каком порядке проводить анализ и как разные элементы дополняют друг друга.</strong></p></div>
+        </div>
+      </section>
+
+      <section class="section" id="format" aria-labelledby="format-title">
+        <div class="wrap">
+          <h2 class="section-title reveal" id="format-title">Формат <em>обучения</em></h2>
+          <div class="format-grid">
+            <article class="format-card glass reveal"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="11" width="36" height="27" rx="4"/><path d="m20 18 11 6-11 6V18ZM13 6h22M13 42h22"/></svg><h3>6 видеоуроков</h3><p>Последовательно проходим путь от устройства рынка до готовой системы анализа.</p></article>
+            <article class="format-card glass reveal"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M24 12v12l9 6M24 5v3"/></svg><h3>Обучение в своём темпе</h3><p>Смотрите уроки в удобное время и при необходимости возвращайтесь к материалу.</p></article>
+            <article class="format-card glass reveal"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 22 41 7 30 41l-9-12-16-7Zm16 7L41 7M21 29l1 11 8-7"/></svg><h3>Доступ через Telegram</h3><p>Все уроки и материалы собраны в одном закрытом канале.</p></article>
+            <article class="format-card glass reveal"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 40h34M7 40V8m6 24 7-9 6 4 9-15m0 0-1 7m1-7-7 1"/></svg><h3>Практика на золоте</h3><p>Основной рынок мини-курса — Gold / XAUUSD / GC.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="who" aria-labelledby="who-title">
+        <div class="wrap">
+          <h2 class="section-title reveal" id="who-title">Кому подойдёт <em>мини-курс</em></h2>
+          <div class="audience-grid">
+            <article class="audience-card glass reveal"><span class="audience-label">Первый шаг</span><h3>Если вы только начинаете</h3><p>Мини-курс поможет сразу сформировать правильное понимание рынка и получить базу для дальнейшего развития.</p></article>
+            <article class="audience-card glass reveal"><span class="audience-label">Новый взгляд</span><h3>Если вы уже торгуете</h3><p>Сможете познакомиться с моим подходом, добавить в свой анализ AMT, Volume Profile и VWAP и посмотреть на привычный график с другой стороны.</p></article>
+          </div>
+          <p class="audience-note reveal">Для прохождения не нужны сложные программы или профессиональное оборудование — достаточно базового понимания терминала и желания разобраться в рынке.</p>
+        </div>
+      </section>
+
+      <section class="section offer-section" id="access" aria-labelledby="access-title">
+        <div class="wrap">
+          <div class="offer-shell reveal"><div class="offer">
+            <h2 id="access-title">Получить <em>доступ</em></h2>
+            <p class="offer-lead">Все 6 уроков базового мини-курса по торговле золотом.</p>
+            <div class="offer-grid">
+              <ul class="offer-includes"><li>Как работает рынок золота</li><li>Auction Market Theory и Price Action</li><li>Volume Profile и VWAP</li><li>Единая система анализа</li><li>Уроки и материалы в закрытом Telegram-канале</li></ul>
+              <div class="price-area">
+                <span class="price-label">Стоимость мини-курса</span><strong class="price-main">10 000 ₸</strong><span class="price-usd">≈ $20</span>
+                <p class="kaspi-label">Доступна оплата через:</p>
+                <div class="kaspi-options" aria-label="Kaspi Kredit и Kaspi RED">
+                  <span class="kaspi-option">KASPI KREDIT</span>
+                  <span class="kaspi-option">KASPI RED</span>
+                </div>
+                <div class="liquid-cta"><a class="button" href="https://api.whatsapp.com/send/?phone=77066387416&amp;text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%BC%D0%B8%D0%BD%D0%B8%20%D0%BA%D1%83%D1%80%D1%81&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer">Купить мини-курс за 10 000 ₸ <span class="button-icon" aria-hidden="true">↗</span></a></div>
+                <p class="offer-foot"><strong>Заявка оформляется через WhatsApp.</strong> После оплаты вы получите инструкцию для доступа к закрытому Telegram-каналу с мини-курсом.</p>
+              </div>
+            </div>
+          </div></div>
+        </div>
+      </section>
+      <section class="mentorship-next" aria-labelledby="mentorship-next-title">
+        <div class="wrap reveal">
+          <span class="mentor-kicker">Следующий шаг · личное обучение</span>
+          <h2 id="mentorship-next-title">Хотите получить <em>результат?</em></h2>
+          <p>Если после мини-курса хотите работать над собственной торговлей вместе со мной, есть личное обучение. Разберём ваши сделки, соберём торговую систему и отработаем сетапы и управление риском. Формат — 3 месяца личной работы и год поддержки.</p>
+          <a class="button mentor-button" href="https://mentorship.xauusd-trader.online/" target="_blank" rel="noopener noreferrer">Узнать подробнее <span class="button-icon" aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><div class="wrap footer-in"><span>Gold Trading Academy</span><a href="#top">Наверх ↑</a></div></footer>
+  </div>
+  <script>
+    const reveals=document.querySelectorAll('.reveal');
+    if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){entry.target.classList.add('show');observer.unobserve(entry.target)}}},{rootMargin:'0px 0px -35px 0px',threshold:.08});reveals.forEach(el=>observer.observe(el))}else reveals.forEach(el=>el.classList.add('show'));
+  </script>
+</body>
+</html>
